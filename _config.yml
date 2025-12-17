@@ -36,6 +36,7 @@ theme_config:
   lowercase_titles: true # show titles in lowercase in lists
 
 remote_theme: riggraz/no-style-please
+#theme: no-style-please
 timezone: America/Los_Angeles
 
 plugins:

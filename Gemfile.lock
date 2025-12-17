@@ -3,11 +3,9 @@ GEM
   specs:
     addressable (2.8.8)
       public_suffix (>= 2.0.2, < 8.0)
-    base64 (0.3.0)
-    bigdecimal (4.0.0)
+    bigdecimal (4.0.1)
     colorator (1.1.0)
     concurrent-ruby (1.3.6)
-    csv (3.3.5)
     digest (3.1.1)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
@@ -61,20 +59,17 @@ GEM
       digest (~> 3.1.1, >= 3.1.1)
       execjs (~> 2.1, >= 2.9.1)
       htmlentities (~> 4.3, >= 4.3.4)
-    jekyll (4.4.1)
+    jekyll (4.3.4)
       addressable (~> 2.4)
-      base64 (~> 0.2)
       colorator (~> 1.0)
-      csv (~> 3.0)
       em-websocket (~> 0.5)
       i18n (~> 1.0)
       jekyll-sass-converter (>= 2.0, < 4.0)
       jekyll-watch (~> 2.0)
-      json (~> 2.6)
       kramdown (~> 2.3, >= 2.3.1)
       kramdown-parser-gfm (~> 1.0)
       liquid (~> 4.0)
-      mercenary (~> 0.3, >= 0.3.6)
+      mercenary (>= 0.3.6, < 0.5)
       pathutil (~> 0.9)
       rouge (>= 3.0, < 5.0)
       safe_yaml (~> 1.0)
@@ -110,6 +105,7 @@ GEM
       jekyll (~> 4.1)
       jekyll-feed (~> 0.14)
       jekyll-seo-tag (~> 2.6)
+    openssl (4.0.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (7.0.0)
@@ -181,22 +177,22 @@ PLATFORMS
 DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jektex
-  jekyll (~> 4.4.1)
+  jekyll (~> 4.3.4)
   jekyll-feed (~> 0.12)
   jekyll-remote-theme
+  json
   minima (~> 2.5)
   no-style-please
+  openssl
   tzinfo (>= 1, < 3)
   tzinfo-data
-  wdm (~> 0.1)
+  webrick
 
 CHECKSUMS
   addressable (2.8.8) sha256=7c13b8f9536cf6364c03b9d417c19986019e28f7c00ac8132da4eb0fe393b057
-  base64 (0.3.0) sha256=27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b
-  bigdecimal (4.0.0) sha256=ec797dffef5566eeccf9f1a39df8fc78ef9c39158dc85b2036d5f11c7e0d3b86
+  bigdecimal (4.0.1) sha256=8b07d3d065a9f921c80ceaea7c9d4ae596697295b584c296fe599dd0ad01c4a7
   colorator (1.1.0) sha256=e2f85daf57af47d740db2a32191d1bdfb0f6503a0dfbc8327d0c9154d5ddfc38
   concurrent-ruby (1.3.6) sha256=6b56837e1e7e5292f9864f34b69c5a2cbc75c0cf5338f1ce9903d10fa762d5ab
-  csv (3.3.5) sha256=6e5134ac3383ef728b7f02725d9872934f523cb40b961479f69cf3afa6c8e73f
   digest (3.1.1) sha256=81a6fd1da320e03d60f730df90b0b002eaf4b29c023aede3b87120dce7ba1307
   em-websocket (0.5.3) sha256=f56a92bde4e6cb879256d58ee31f124181f68f8887bd14d53d5d9a292758c6a8
   eventmachine (1.2.7) sha256=994016e42aa041477ba9cff45cbe50de2047f25dd418eba003e84f0d16560972
@@ -226,7 +222,7 @@ CHECKSUMS
   http_parser.rb (0.8.0) sha256=5a0932f1fa82ce08a8516a2685d5a86031c000560f89946913c555a0697544be
   i18n (1.14.7) sha256=ceba573f8138ff2c0915427f1fc5bdf4aa3ab8ae88c8ce255eb3ecf0a11a5d0f
   jektex (0.1.1) sha256=a82d04f6b60cad06ed1add426c62718af6121d5c06fee8859ac7bee6e834470f
-  jekyll (4.4.1) sha256=4c1144d857a5b2b80d45b8cf5138289579a9f8136aadfa6dd684b31fe2bc18c1
+  jekyll (4.3.4) sha256=c488282c2819c392d34d3a3784eacde2cde4b61c8e3c9c9295f6c01fb1754404
   jekyll-feed (0.17.0) sha256=689aab16c877949bb9e7a5c436de6278318a51ecb974792232fd94d8b3acfcc3
   jekyll-remote-theme (0.4.1) sha256=6b6e673d6c4a8960032e2886755532e4419c404fe8042988072aa7ce4b4bc605
   jekyll-sass-converter (3.1.0) sha256=83925d84f1d134410c11d0c6643b0093e82e3a3cf127e90757a85294a3862443
@@ -240,6 +236,7 @@ CHECKSUMS
   mercenary (0.4.0) sha256=b25a1e4a59adca88665e08e24acf0af30da5b5d859f7d8f38fba52c28f405138
   minima (2.5.2) sha256=9c434e3b7bc4a0f0ab488910438ed3757a0502ff1060d172f361907fc38aa45a
   no-style-please (0.1.0) sha256=a31df857c0c68a737e1d49e79cb583b50927f94218729d73c5b784cb529ea1ff
+  openssl (4.0.0) sha256=185711ed93d4e9c9a9db6efea7edb202dfe04f7d3692fbab988e3d84e498ee91
   pathutil (0.16.2) sha256=e43b74365631cab4f6d5e4228f812927efc9cb2c71e62976edcb252ee948d589
   public_suffix (7.0.0) sha256=f7090b5beb0e56f9f10d79eed4d5fbe551b3b425da65877e075dad47a6a1b095
   rake (13.3.1) sha256=8c9e89d09f66a26a01264e7e3480ec0607f0c497a861ef16063604b1b08eb19c
