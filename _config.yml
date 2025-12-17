@@ -26,23 +26,23 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://itaiboss.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: itaiboss
-favicon: "logo.png"
+favicon: "assets/favicon.png"
 # Build settings
 theme_config:
-  appearance: "auto" # can be "light", "dark" or "auto"
+  appearance: "light/Users/itaiboss/Downloads/wizz.png" # can be "light", "dark" or "auto"
   back_home_text: ".." # customize text for homepage link in post layout
   date_format: "%Y-%m-%d" # customize how date is formatted
   show_description: false # show blog description in home page
   lowercase_titles: true # show titles in lowercase in lists
 
-remote_theme: riggraz/no-style-please
+#remote_theme: riggraz/no-style-please
 #theme: no-style-please
 timezone: America/Los_Angeles
 
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-remote-theme
+ # - jekyll-remote-theme
 header_pages:
   - index.md
   - about.md

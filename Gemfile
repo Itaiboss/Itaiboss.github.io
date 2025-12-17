@@ -17,7 +17,6 @@ gem "minima", "~> 2.5"
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jektex"
-  gem "jekyll-remote-theme"
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -33,8 +32,11 @@ end
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-gem "no-style-please"
 gem "webrick"
 
 gem "openssl"
 gem "json"
+gem "csv"
+gem "logger"
+gem "base64"
+gem "bigdecimal"
