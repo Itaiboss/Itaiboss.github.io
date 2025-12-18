@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-#title: Itai Boss 
+title: Itai Boss 
 email: itai.s.boss@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Embedded systems engineer working with microcontrollers, 
@@ -45,8 +45,11 @@ plugins:
  # - jekyll-remote-theme
 header_pages:
   - index.md
-  - about.md
-  - projects.md
+
+collections:
+  trip-reports:
+    output: true
+    permalink: /trip-reports/:name/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

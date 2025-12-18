@@ -2,7 +2,7 @@ entries:
 #  - title: home
  #   url: /
   - title: trip reports
-    url: /trip_reports/
+    url: /trip-reports/
   - title: archive
     url: /archive.html
     post_list:
