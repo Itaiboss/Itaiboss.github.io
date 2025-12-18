@@ -1,0 +1,10 @@
+<header style="margin-top: 2em; margin-bottom: 3em;">
+  <nav>
+    {% for item in site.data.menu %}
+      <a href="{{ item.url | relative_url }}" 
+         style="margin-right: 15px; text-decoration: none; color: inherit; {% if page.url == item.url %} font-weight: bold; border-bottom: 2px solid; {% endif %}">
+        {{ item.name }}
+      </a>
+    {% endfor %}
+  </nav>
+</header>

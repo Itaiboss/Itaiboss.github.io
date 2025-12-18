@@ -2,12 +2,19 @@
 layout: default
 ---
 <header>
-  <h1>{{ site.title }}</h1>
+    <!-- <h1>{{ site.title }}</h1> -->
   {%-if site.theme_config.show_description-%}
     <p>{{ site.description }}</p>
   {%-endif-%}
 </header>
 
-{%-include menu_item.html collection=site.data.menu.entries-%}
-
+<nav style="margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+  {% for item in site.data.menu.entries %}
+    <a href="{{ item.url | relative_url }}" style="margin-right: 20px; text-decoration: none; font-weight: 500;">
+      {{ item.title }}
+    </a>
+  {% endfor %}
+</nav>
 {{ content }}
+
+
