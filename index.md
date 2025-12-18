@@ -23,7 +23,7 @@ layout: home
 ### Things I think are pretty cool:
 * **Snowboarding:** Increasingly splitboarding.
 * **Diving:** As close to space as I'll probably ever get
-* **Music** Learning bass and always listening
+* **Music** Learning bass and always listening. Here's what I've been listening to this year
 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZEVXd9esR2nH6gsn?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>* **Human-Powered Travel:** Humans are pretty incredible 
 * **Prototype Hardware:** I love the magic of bringing a project to life
 * **Board Games:** The more rules the better
