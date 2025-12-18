@@ -5,9 +5,19 @@ date:   2025-12-16 18:44:40 -0800
 categories: jekyll update
 ---
 
-I have been **thinking** about making a webpage/blog for myself for a long time. 
+After what feels like *forever*, I've finally gotten around to building something I've been putting off: **creating a personal blog**.
 
-For a while I had a website that was more of a portfolio focused on school/technical projects, mostly for recruiters & internships, but I never really ended up finishing it because I just wasn't that interested in developing it. All of that information is already on my github and it just felt repetitive and kind of useless. 
+## The Old Website (RIP)
+For a while, I maintained portfolio site that was focused on school/technical projects, mostly for recruiters & internships, basically a resume in website form. 
+But due to a lack of interest **I never actually finished it**.
+Why? Because it felt redundant. Everything is already on my github and like most of the other people around me my website was not built for me, it was built for other people. 
 
-I'm hoping to make this page/blog more about the interesting things going on in my life and school as well as the projects I may be working on in the lab as well as my trips outside.
-Honestly this webpage will be more for me than for anyone else, as an outlet to share my life without the constant distraction of other social media platforms. 
+## This time around  
+This blog isn't about impressing anyone or checking boxes. It's about sharing:
+
+- **Adventures** and trips outside 
+- **Lab work** and projects I'm excited about
+- **Ideas and thoughts** about what's going on in my life and studies
+
+---
+So here we go.
