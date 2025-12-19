@@ -6,7 +6,11 @@ permalink: /contact/
 
 ### reach out
 
+### What I do
+- Embedded Systems & Robotics: Embedded C, Rust, and ROS for autonomous systems.
+- Control Systems: Classical and state-space techniques, RTOS and finite state machines. 
 <div style="display: flex; flex-direction: column; gap: 10px;">
+
   <div style="display: flex; align-items: center; gap: 10px;">
     <svg role="img" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.573l8.073-6.08c1.618-1.214 3.927-.059 3.927 1.964z"/></svg>
     <a href="mailto:itai.s.boss@gmail.com">itai.s.boss@gmail.com</a>
