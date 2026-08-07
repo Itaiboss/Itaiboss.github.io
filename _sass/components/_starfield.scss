@@ -1,0 +1,129 @@
+@use "../variables" as *;
+@use "sass:math";
+
+.diffraction-star {
+  display: none;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1;
+  opacity: .75;
+
+  /* central Airy disk + diffraction spikes */
+  background:
+    /* horizontal primary diffraction spike */
+    linear-gradient(
+      to right,
+      transparent 0%,
+      transparent 15%,
+      rgba(140,180,255,.15) 30%,
+      rgba(255,255,255,.35) 46%,
+      rgba(255,255,255,1) 50%,
+      rgba(255,255,255,.35) 54%,
+      rgba(255,220,160,.15) 70%,
+      transparent 85%
+    ),
+    /* vertical primary diffraction spike */
+    linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 15%,
+      rgba(140,180,255,.15) 30%,
+      rgba(255,255,255,.35) 46%,
+      rgba(255,255,255,1) 50%,
+      rgba(255,255,255,.35) 54%,
+      rgba(255,220,160,.15) 70%,
+      transparent 85%
+    ),
+    /* short diagonal secondary spikes */
+    linear-gradient(
+      45deg,
+      transparent 47%,
+      rgba(255,255,255,.2) 49.5%,
+      rgba(255,255,255,.4) 50%,
+      rgba(255,255,255,.2) 50.5%,
+      transparent 53%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 47%,
+      rgba(255,255,255,.15) 49.5%,
+      rgba(255,255,255,.3) 50%,
+      rgba(255,255,255,.15) 50.5%,
+      transparent 53%
+    ),
+    /* Airy disk (bright core) */
+    radial-gradient(
+      circle,
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,.95) 5%,
+      rgba(255,255,255,.5) 15%,
+      rgba(255,255,255,.15) 30%,
+      transparent 55%
+    );
+  background-repeat: no-repeat;
+
+  /* near layer: full parallax strength + subtle rotation, no CSS transition (JS handles lag) */
+  transform:
+    translate(var(--parallax-x, 0px), var(--parallax-y, 0px))
+    rotate(calc(var(--parallax-x, 0px) * 0.02deg));
+}
+
+/* Twinkle animation - subtle opacity pulse */
+@keyframes twinkle {
+  0%, 100% { opacity: var(--twinkle-max, .8); }
+  50% { opacity: var(--twinkle-min, .25); }
+}
+
+/* Random star placement, size, color tint, and twinkle */
+@for $i from 1 through 20 {
+  .star-#{$i} {
+    $x: math.random(100);
+    $y: math.random(100);
+
+    $size-roll: math.random(100);
+    $size: 10px;
+    @if $size-roll < 80 {
+      $size: math.random(8) + 5px;
+    } @else if $size-roll < 95 {
+      $size: math.random(12) + 12px;
+    } @else {
+      $size: math.random(20) + 10px;
+    }
+
+    top: #{$y}vh;
+    left: #{$x}vw;
+    width: $size;
+    height: $size;
+
+    $base-opacity: math.div(math.random(50) + 50, 100);
+    opacity: $base-opacity;
+    --twinkle-max: #{$base-opacity};
+    --twinkle-min: #{$base-opacity * 0.3};
+
+    $hue-roll: math.random(100);
+    @if $hue-roll < 33 {
+      filter:
+        drop-shadow(0 0 2px #fff)
+        drop-shadow(0 0 6px rgba(150,190,255,.5))
+        drop-shadow(0 0 14px rgba(120,160,255,.25));
+    } @else if $hue-roll < 66 {
+      filter:
+        drop-shadow(0 0 2px #fff)
+        drop-shadow(0 0 6px rgba(255,220,180,.5))
+        drop-shadow(0 0 14px rgba(255,190,120,.25));
+    } @else {
+      filter:
+        drop-shadow(0 0 2px #fff)
+        drop-shadow(0 0 6px rgba(200,200,255,.4))
+        drop-shadow(0 0 14px rgba(160,160,255,.2));
+    }
+
+    $twinkle-roll: math.random(100);
+    @if $twinkle-roll < 40 {
+      $duration: 10 + math.div(math.random(300), 100);
+      $delay: math.div(math.random(500), 100);
+      animation: twinkle #{$duration}s ease-in-out infinite;
+      animation-delay: #{$delay}s;
+    }
+  }
+}

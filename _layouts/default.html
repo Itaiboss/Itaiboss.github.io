@@ -1,21 +1,28 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: "en" }}">
+<html lang="{{ page.lang | default: "en" }}" data-theme="space">
   {%- include head.html -%}
-  <body a="{{ site.theme_config.appearance | default: "auto" }}">
+  <body>
+    <div class="layer-mid"></div>
+    {% for i in (1..20) %}<div class="diffraction-star star-{{ i }}"></div>{% endfor %}
     <main class="page-content" aria-label="Content">
       <div class="w">
         {{ content }}
       </div>
+      <footer class="site-footer">
+        <hr>
+        <p>{{ site.title }} - Last updated: {{ site.time | date: "%Y.%m.%d" }} - <a href="{{ "/" | relative_url }}">home</a></p>
+      </footer>
     </main>
-
     {%-if site.goat_counter and jekyll.environment == "production"-%}
       {%-include goat_counter.html-%}
     {%-endif-%}
-
     {% if page.custom_js %}
       {% for js_file in page.custom_js %}
         <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
       {% endfor %}
     {% endif %}
+    <script src="{{ site.baseurl }}/assets/js/parallax.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/theme-switcher.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/hit-counter.js"></script>
   </body>
 </html>

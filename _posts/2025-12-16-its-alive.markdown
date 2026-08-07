@@ -8,9 +8,9 @@ categories: jekyll update
 After what feels like *forever*, I've finally gotten around to building something I've been putting off: **creating a personal blog**.
 
 ## The Old Website (RIP)
-For a while, I maintained portfolio site that was focused on school/technical projects, mostly for recruiters & internships, basically a resume in website form. 
-But due to a lack of interest **I never actually finished it**.
-Why? Because it felt redundant. Everything is already on my github and like most of the other people around me my website was not built for me, it was built for other people. 
+For a while, I maintained a portfolio site that was focused on school/technical projects, mostly for recruiters & internships, basically a resume in website form. 
+But due to a lack of interest, **I never actually finished it**.
+Why? Because it felt redundant my github. Also, my website was not built for me, it was built for other people. 
 
 ## This time around  
 This blog isn't about impressing anyone or checking boxes. It's about sharing:

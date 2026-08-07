@@ -1,0 +1,131 @@
+@use "../variables" as *;
+
+/* ==========================================================
+   ORGANIC SHELL (SOLID SHAPES ONLY)
+   ========================================================== */
+
+.site-controls {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: var(--accent-gold);
+    font: inherit;
+  }
+
+  [data-mode-toggle] {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  [data-boring-toggle] {
+    font-family: $font-body;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .hit-counter {
+    font-family: $font-mono;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    background: var(--panel-bg-dark);
+    border: 1px solid var(--frame-dark);
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+/* Icon shown reflects the active theme; toggled purely by [data-theme] */
+[data-theme="space"] .site-controls .icon-sun { display: none; }
+[data-theme="fantasy"] .site-controls .icon-moon { display: none; }
+
+.site-header {
+  position: relative;
+  margin: 0 0 2rem;
+  padding: 1rem 1.5rem;
+
+  background-color: var(--panel-bg-dark);
+  border-bottom: 3px solid var(--frame-dark);
+}
+
+/* ==========================================================
+   CENTRAL REACTOR / EMBLEM
+   ========================================================== */
+
+.site-emblem {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 1.2rem;
+
+  // Solid accent color
+  background-color: var(--accent-gold);
+
+  // Organic, non-circular pod geometry
+  border-radius: 42% 58% 70% 30% / 50% 60% 40% 50%;
+}
+
+.site-title {
+  text-align: center;
+  font-family: $font-body;
+  font-weight: bold;
+  font-size: 1.4rem;
+  letter-spacing: 0.05em;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================
+   CARVED NAVIGATION & RIBS
+   ========================================================== */
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 3px;
+
+  /* Chunky beveled tab buttons */
+  a {
+    padding: 0.5rem 1rem;
+
+    font-family: $font-body;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    color: #ffffff;
+    background-color: var(--frame-dark);
+    border: 2px solid var(--frame-dark);
+    box-shadow:
+      inset 1px 1px 0 rgba(255, 255, 255, 0.4),
+      2px 2px 0 rgba(0, 0, 0, 0.3);
+
+    &:hover,
+    &.active {
+      filter: brightness(1.15);
+    }
+  }
+}
+
+/* Bone Rib Separators */
+.rib {
+  display: inline-block;
+  width: 6px;
+  height: 24px;
+  border-radius: 20px;
+  background-color: var(--frame-mid);
+}

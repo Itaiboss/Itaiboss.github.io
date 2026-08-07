@@ -1,8 +1,8 @@
 entries:
 #  - title: home
  #   url: /
-  - title: trip reports
-    url: /trip-reports/
+  - title: portfolio
+    url: /portfolio/
   - title: archive
     url: /archive.html
     post_list:
@@ -10,5 +10,9 @@ entries:
       show_more: true
       show_more_text: "see all posts..."
       show_more_url: /archive.html
+  - title: resume
+    url: /resume/
+  - title: trip reports
+    url: /trip-reports/
   - title: contact
     url: /contact/

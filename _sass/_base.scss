@@ -1,0 +1,37 @@
+@use "variables" as *;
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-desktop);
+  color: var(--text);
+  font-family: $font-body;
+}
+
+/* Real page content — sits above all background layers */
+main.page-content {
+  position: relative;
+  z-index: 2;
+}
+
+h1, h2, h3 {
+  font-family: $font-body;
+  text-shadow: 1px 1px 0 var(--frame-dark);
+}
+
+a {
+  color: var(--accent-gold);
+  &:visited { color: var(--frame-mid); }
+  &:hover { text-decoration: underline; }
+}
+
+/* Old-web "last updated" footer — hidden except in boring mode */
+.site-footer {
+  display: none;
+  margin-top: 2em;
+  font-family: $font-body;
+  font-size: 0.85em;
+  font-style: italic;
+}

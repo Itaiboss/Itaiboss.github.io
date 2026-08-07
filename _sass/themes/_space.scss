@@ -1,0 +1,248 @@
+@use "../variables" as *;
+
+[data-theme="space"] {
+  --bg-desktop: #03050f;
+  --panel-bg: #10184a;
+  --panel-bg-dark: #060a28;
+  --frame-light: #6fd3ff;
+  --frame-dark: #050b24;
+  --frame-mid: #2a4a8f;
+  --title-start: #1a3a8f;
+  --title-end: #3a6fd4;
+  --title-text: #eaf6ff;
+  --terminal-bg: #060a28;
+  --terminal-fg: #4dd4ff;
+  --accent-gold: #4dd4ff;
+  --text: #cfe4ff;
+  --panel-text: #cfe4ff;
+}
+
+body.theme-space {
+  &::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    pointer-events: none;
+    background-image:
+      radial-gradient(ellipse at 20% 30%, rgba(120, 60, 220, 0.18), transparent 45%),
+      radial-gradient(ellipse at 80% 70%, rgba(40, 100, 255, 0.15), transparent 50%),
+      radial-gradient(ellipse at 50% 10%, rgba(255, 80, 180, 0.08), transparent 40%),
+      radial-gradient(circle at 15% 20%, white 0 2px, transparent 2px),
+      radial-gradient(circle at 65% 30%, white 0 2px, transparent 2px),
+      radial-gradient(circle at 80% 75%, white 0 2px, transparent 2px),
+      radial-gradient(1px 1px at 10px 20px, rgba(255,255,255,.9), transparent),
+      radial-gradient(1px 1px at 35px 80px, rgba(255,255,255,.8), transparent),
+      radial-gradient(1px 1px at 70px 40px, rgba(255,255,255,.9), transparent),
+      radial-gradient(1px 1px at 110px 130px, rgba(255,255,255,.7), transparent),
+      radial-gradient(1px 1px at 160px 70px, rgba(255,255,255,.8), transparent),
+      radial-gradient(1px 1px at 220px 180px, rgba(255,255,255,.9), transparent),
+      radial-gradient(1px 1px at 280px 50px, rgba(255,255,255,.7), transparent),
+      radial-gradient(1px 1px at 340px 140px, rgba(255,255,255,.8), transparent),
+      radial-gradient(1px 1px at 400px 90px, rgba(255,255,255,.9), transparent),
+      radial-gradient(1px 1px at 470px 200px, rgba(255,255,255,.8), transparent),
+      radial-gradient(1px 1px at 50px 300px, rgba(200,220,255,.8), transparent),
+      radial-gradient(1px 1px at 150px 350px, white, transparent),
+      radial-gradient(1px 1px at 260px 320px, white, transparent),
+      radial-gradient(1px 1px at 380px 380px, rgba(255,240,220,.8), transparent),
+      radial-gradient(1px 1px at 500px 300px, white, transparent),
+      radial-gradient(1px 1px at 600px 420px, white, transparent),
+      radial-gradient(1px 1px at 750px 350px, rgba(220,235,255,.8), transparent),
+      radial-gradient(1px 1px at 900px 500px, white, transparent),
+      radial-gradient(0.7px 0.7px at 20px 20px, rgba(255,255,255,.5), transparent);
+    background-size:
+      cover, cover, cover,
+      900px 900px, 900px 900px, 450px 450px,
+      300px 300px, 600px 600px, 150px 150px;
+    background-repeat: repeat;
+    transform: translate(
+      calc(var(--parallax-x, 0px) * 0.05),
+      calc(var(--parallax-y, 0px) * 0.05)
+    );
+  }
+
+  &::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(circle, transparent 40%, rgba(0,0,0,.5));
+  }
+
+  .diffraction-star {
+    display: block;
+  }
+
+  .site-controls button,
+  .site-controls .hit-counter {
+    filter: drop-shadow(0 0 4px var(--accent-gold));
+  }
+
+  .site-nav {
+    gap: 8px;
+
+    a {
+      border-radius: 999px;
+      background-color: var(--frame-mid);
+      border-color: var(--frame-light);
+
+      &:hover,
+      &.active {
+        background-color: var(--accent-gold);
+        filter: brightness(1.15);
+      }
+    }
+  }
+
+  /* Header reads as one integrated console readout: a small status
+     light next to a terminal-style label, not a floating decoration */
+  .site-identity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .site-emblem {
+    position: relative;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    background: transparent;
+    border-radius: 50%;
+
+    .emblem-ring { display: none; }
+
+    .emblem-core {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      box-shadow: 0 0 8px 2px var(--accent-gold);
+      animation: status-pulse 2.4s ease-in-out infinite;
+    }
+  }
+
+  .site-title {
+    margin-bottom: 0;
+    font-family: $font-mono;
+    font-size: 1.1rem;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    text-shadow: 0 0 6px currentColor;
+    color: var(--accent-gold);
+
+    &::before { content: "> "; }
+  }
+
+  main.page-content {
+    transform: translate(
+      calc(var(--parallax-x, 0px) * -0.2),
+      calc(var(--parallax-y, 0px) * -0.2)
+    );
+  }
+
+  .layer-mid {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+    background-image:
+      radial-gradient(1px 1px at 10% 20%, white, transparent),
+      radial-gradient(1px 1px at 30% 80%, white, transparent),
+      radial-gradient(1px 1px at 55% 35%, white, transparent),
+      radial-gradient(1px 1px at 80% 60%, white, transparent),
+      radial-gradient(2px 2px at 70% 15%, white, transparent),
+      radial-gradient(2px 2px at 25% 45%, white, transparent);
+    background-size: 250px 250px;
+    animation: drift 100s linear infinite;
+  }
+
+  /* Terminal screen: dark bezel, scanline texture, glowing prompt header */
+  .win-window {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--frame-dark);
+    border-radius: 8px;
+    box-shadow:
+      0 0 16px rgba(80, 140, 255, 0.3),
+      inset 0 0 12px rgba(0, 0, 0, 0.6);
+    background-color: var(--terminal-bg);
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.15) 0px,
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 3px
+    );
+  }
+
+  .win-titlebar {
+    background: var(--panel-bg-dark);
+    border-bottom: 1px solid var(--frame-light);
+    font-family: $font-mono;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    color: var(--accent-gold);
+    text-shadow: 0 0 4px currentColor;
+  }
+
+  .win-title {
+    &::before { content: "> "; }
+    &::after {
+      content: "_";
+      animation: cursor-blink 1s step-end infinite;
+    }
+  }
+
+  .win-body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-gold) transparent;
+
+    &::-webkit-scrollbar { width: 8px; }
+    &::-webkit-scrollbar-thumb {
+      background: var(--accent-gold);
+      border: 1px solid var(--frame-dark);
+      border-radius: 0;
+    }
+    &::-webkit-scrollbar-track { background: transparent; }
+  }
+}
+
+@keyframes drift {
+  from {
+    transform: translate(
+      calc(var(--parallax-x, 0px) * 0.3),
+      calc(var(--parallax-y, 0px) * 0.3)
+    );
+  }
+  to {
+    transform: translate(
+      calc(var(--parallax-x, 0px) * 0.3),
+      calc(var(--parallax-y, 0px) * 0.3 - 500px)
+    );
+  }
+}
+
+@keyframes status-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes cursor-blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.theme-space {
+    .emblem-core,
+    .win-title::after {
+      animation: none;
+    }
+  }
+}

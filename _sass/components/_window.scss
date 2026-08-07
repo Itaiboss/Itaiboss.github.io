@@ -1,0 +1,31 @@
+// _sass/_components/_window.scss
+@use "../variables" as *;
+.win-window {
+  position: relative;
+  z-index: 2;
+  border: 2px solid var(--frame-dark);
+  box-shadow:
+    inset 1px 1px 0 var(--frame-light),
+    inset -1px -1px 0 var(--frame-mid),
+    3px 3px 6px rgba(0,0,0,.5);
+  background: var(--panel-bg);
+  color: var(--panel-text);
+  margin: 12px 0;
+
+  &.terminal {
+    background: var(--terminal-bg);
+    color: var(--terminal-fg);
+    font-family: $font-mono;
+  }
+}
+
+.win-titlebar {
+  background: linear-gradient(90deg, var(--title-start), var(--title-end));
+  padding: 3px 6px;
+  font-family: $font-body;
+  font-weight: bold;
+  font-size: 13px;
+  color: var(--title-text);
+}
+
+.win-body { padding: 10px; }
