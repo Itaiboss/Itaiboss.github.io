@@ -14,3 +14,7 @@ permalink: /portfolio/
     </li>
   {% endfor %}
 </ul>
+
+{% if site.portfolio.size < 3 %}
+  <p><em>More coming eventually — the backlog is longer than the list above.</em></p>
+{% endif %}

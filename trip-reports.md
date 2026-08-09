@@ -14,3 +14,7 @@ permalink: /trip-reports/
     </li>
   {% endfor %}
 </ul>
+
+{% if site.trip-reports.size < 3 %}
+  <p><em>More coming eventually — I don't get out as much as I'd like.</em></p>
+{% endif %}

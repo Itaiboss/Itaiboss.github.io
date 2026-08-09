@@ -1,6 +1,6 @@
 entries:
-#  - title: home
- #   url: /
+  - title: home
+    url: /
   - title: portfolio
     url: /portfolio/
   - title: archive

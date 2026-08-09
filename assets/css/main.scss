@@ -1,10 +1,6 @@
 ---
 ---
 @use "variables" as *;
-@use "themes/space";
-@use "themes/fantasy";
-@use "themes/boring";
+@use "theme";
 @use "base";
-@use "components/window";
-@use "components/starfield";
 @use "components/header";
