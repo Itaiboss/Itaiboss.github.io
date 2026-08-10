@@ -4,17 +4,22 @@ title: portfolio
 permalink: /portfolio/
 ---
 
-<ul class="post-list">
+<div class="portfolio-gallery">
   {% for project in site.portfolio reversed %}
-    <li>
-      <span class="post-meta">{{ project.date | date: "%Y-%m-%d" }}</span>
-      <a class="post-link" href="{{ project.url | relative_url }}">
+    <a class="portfolio-tile" href="{{ project.url | relative_url }}">
+      <div class="portfolio-tile-frame{% unless project.thumbnail %} placeholder{% endunless %}">
+        {% if project.thumbnail %}
+          <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title | escape }}" />
+        {% else %}
+          <span>[ no photo yet ]</span>
+        {% endif %}
+      </div>
+      <div class="portfolio-tile-caption">
         {{ project.title | escape }}
-      </a>
-    </li>
+        <span class="portfolio-tile-date">{{ project.date | date: "%Y" }}</span>
+      </div>
+    </a>
   {% endfor %}
-</ul>
+</div>
 
-{% if site.portfolio.size < 3 %}
-  <p><em>More coming eventually — the backlog is longer than the list above.</em></p>
-{% endif %}
+<p class="portfolio-gallery-note">More projects and photos at <a href="https://github.com/Itaiboss">github.com/Itaiboss</a>.</p>

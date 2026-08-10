@@ -25,16 +25,6 @@ Finished an Internship at MIT Lincoln Labs working on agile LEO satellites. Back
 
 <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/playlist/37i9dQZEVXd9esR2nH6gsn?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-## Webring
-
-A short list of sites worth your time:
-
-* [Old School RuneScape](https://oldschool.runescape.com/) — the state of the art hasn't improved since 2007, and that's fine.
-* [Kerbal Space Program](https://www.kerbalspaceprogram.com/) — the reason I understand orbital mechanics at all.
-* [MIT Lincoln Laboratory](https://www.ll.mit.edu/) — where I got to work on satellites.
-
-*(More to come — let me know if your site belongs here.)*
-
 ## Recent Posts
 
 <ul class="post-list">
